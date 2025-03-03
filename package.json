@@ -11,13 +11,16 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "solid-devtools": "^0.33.0",
     "typescript": "^5.7.2",
     "vite": "^6.0.0",
     "vite-plugin-solid": "^2.11.1"
   },
   "dependencies": {
     "linked-list-typescript": "^1.0.15",
+    "nanoid": "^5.1.2",
     "rxjs": "^7.8.2",
-    "solid-js": "^1.9.3"
+    "solid-js": "^1.9.3",
+    "solid-transition-group": "^0.3.0"
   }
 }

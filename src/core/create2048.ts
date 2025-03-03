@@ -1,6 +1,7 @@
 import { createStore, unwrap } from "solid-js/store";
 import { config } from "../config";
 import { TBlock } from "../types/Block";
+import createBlock from "./createBlock";
 type TStore = {
   [key: number]: {
     [key: number]: TBlock | undefined;
@@ -19,21 +20,28 @@ const create2048 = (initialCols: number) => {
   const [store, setStore] = createStore<TStore>(
     generateInitialStore(initialCols)
   );
+  const blocks = createBlock();
 
   return {
     board: () => {
       return {
         store,
-        data: unwrap(store),
         initialCols,
+        addBlock: (x: number) => {
+          console.log({ x });
+
+          const lastIndex = Object.keys(store[x]).length;
+          const block = blocks.createBlock(x, lastIndex);
+          setStore(x, lastIndex, block);
+        },
       };
     },
     cell: (index: number) => {
       const [cell, setCell] = createStore(store[index]);
+
       return {
         useCell: cell,
-        setCell,
-        data: unwrap(cell),
+        setCell: setCell,
       };
     },
     block: (x: number, y: number) => {

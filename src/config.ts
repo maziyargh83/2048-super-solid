@@ -17,5 +17,5 @@ export const sequenceConfig = {
 } as const;
 
 export const rowIdAttr = "rowid";
-export const cellWidth = config.sizing.x / config.rows - config.colsGap;
-export const cellHeight = config.sizing.y / config.cols - config.colsGap;
+export const cellWidth = `${config.sizing.x / config.rows - config.colsGap}px`;
+export const cellHeight = `${config.sizing.y / config.cols - config.colsGap}px`;
