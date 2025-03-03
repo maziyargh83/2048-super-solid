@@ -1,6 +1,7 @@
 import type { Component } from "solid-js";
 import { Board } from "./components/Board";
 import { cellHeight, cellWidth, config } from "./config";
+import { Preview } from "./components/Preview";
 const App: Component = () => {
   return (
     <>
@@ -14,6 +15,7 @@ const App: Component = () => {
         }}
       >
         <Board />
+        <Preview />
       </div>
     </>
   );

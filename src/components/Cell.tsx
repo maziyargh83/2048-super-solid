@@ -17,6 +17,7 @@ export const Cell = (props: CellProps) => {
             y={props.index}
             value={block.value}
             id={block.id}
+            className={"animate-drop"}
           />
         )}
       </For>
