@@ -1,9 +1,18 @@
 import type { Component } from "solid-js";
-
+import { Board } from "./components/Board";
+import { config } from "./config";
 const App: Component = () => {
   return (
     <>
-      <h1>Hello world!!!!</h1>
+      <div
+        class="container"
+        style={{
+          "--width": config.sizing.width,
+          "--height": config.sizing.height,
+        }}
+      >
+        <Board />
+      </div>
     </>
   );
 };

@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nova+Mono&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+	--background: #0d1b2a;
+	--foreground: #f4d35e;
+	--accent: #e2dcc8;
+	--cell-background: #004A94;
+	--board-background: #1b263b;
+
+	--spacing: 10px;
+
+	--border-radius: 10px;
+
+}
+
+
+.montserrat-regular {
+	font-family: "Montserrat", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.raleway-regular {
+	font-family: "Raleway", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 400;
+	font-style: normal;
+}
+
+.nova-mono-regular {
+	font-family: "Nova Mono", monospace;
+	font-weight: 400;
+	font-style: normal;
+}
+
+body {
+	background-color: var(--background);
+	font-family: "Nova Mono", monospace;
+}
+
+.board {
+	background-color: var(--board-background);
+	display: flex;
+	gap: var(--spacing);
+	width: var(--width, 250px);
+	height: var(--height, 250px);
+	border-radius: var(--border-radius);
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.cell {
+	background-color: var(--cell-background);
+	width: var(--cell-width, 100%);
+	height: var(--cell-height, 1/6);
+	border-radius: var(--border-radius);
+}
